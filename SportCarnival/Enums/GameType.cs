@@ -8,8 +8,8 @@ namespace SportCarnival.Enums
 {
     public enum GameType
     {
-        Cricket,
-        Badminton,
-        Chess
+        Cricket = 1,
+        Badminton = 2,
+        Chess = 3
     }
 }
