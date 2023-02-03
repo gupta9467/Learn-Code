@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4232aa2b23a640adb035e5b0524a5cbd" Name="Diagram1">
+        <EntityTypeShape EntityType="LearnCodeModel.Event" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LearnCodeModel.GameType" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LearnCodeModel.Match" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LearnCodeModel.Occasion" Width="1.5" PointX="5.75" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LearnCodeModel.Player" Width="1.5" PointX="3" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LearnCodeModel.Team" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LearnCodeModel.Team_Player" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="LearnCodeModel.FK__Team__eventId__31EC6D26" ManuallyRouted="false" />
+        <AssociationConnector Association="LearnCodeModel.FK__Team__gameId__32E0915F" ManuallyRouted="false" />
+        <AssociationConnector Association="LearnCodeModel.FK__Match__firstTeam__300424B4" ManuallyRouted="false" />
+        <AssociationConnector Association="LearnCodeModel.secondTeamId" ManuallyRouted="false" />
+        <AssociationConnector Association="LearnCodeModel.FK__Team_Play__playe__33D4B598" ManuallyRouted="false" />
+        <AssociationConnector Association="LearnCodeModel.FK__Team_Play__teamI__34C8D9D1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

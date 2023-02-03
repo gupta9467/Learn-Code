@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace SportCarnival.Model
 {
-    public class TeamList
+    public class Teams : Game
     {
-        public List<Teams> Teams { get; set; }
-        public int total { get; set; }
+        public int TeamId { get; set; }
+
+        public string TeamName { get; set; }
     }
 }

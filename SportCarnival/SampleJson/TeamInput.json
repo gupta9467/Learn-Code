@@ -3,19 +3,19 @@
   "players": [
     {
       "playerId": 1,
-      "name": "A"
+      "PlayerName": "A"
     },
     {
       "playerId": 2,
-      "name": "B"
+      "PlayerName": "B"
     },
     {
       "playerId": 3,
-      "name": "C"
+      "PlayerName": "C"
     },
     {
       "playerId": 4,
-      "name": "D"
+      "PlayerName": "D"
     }
   ]
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SportCarnival.Enums
 {
-    public enum GameType
+    public enum GameTypes
     {
         Cricket = 1,
         Badminton = 2,
