@@ -19,7 +19,7 @@ namespace SportCarnival.Services
 
         private TeamRepository _teamRepository = new TeamRepository();
 
-        public List<Teams> CreateTeam(Game game)
+        public void CreateTeam(Game game)
         {
             List<Teams> teams = new List<Teams>();
             if (game.GameType == GameTypes.Cricket)
@@ -41,7 +41,6 @@ namespace SportCarnival.Services
                 teams.AddRange(team);
             }
             _teamRepository.AddTeam(teams);
-            return teams;
         }
 
         public static List<Teams> CreateTeamForGame(List<Player> players, GameTypes gameType, int numberofPlayers)

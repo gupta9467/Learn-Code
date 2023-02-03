@@ -24,8 +24,6 @@ namespace SportCarnival.Repository
 
         public void AddTeam(List<Teams> teams)
         {
-            Team teamData = GetAll().ToList().LastOrDefault();
-            string name = teamData.name;
             foreach (Teams teamItem in teams)
             {
                 Team team = new Team()
@@ -33,7 +31,16 @@ namespace SportCarnival.Repository
                     teamId = teamItem.TeamId,
                     name = teamItem.TeamName,
                     eventId = 1,
-                    gameId = (int)teamItem.GameType
+                    gameId = (int)teamItem.GameType,
+                    Team_Player = new List<Team_Player>()
+                    {
+                        new Team_Player()
+                        {
+                            playerId = teamItem.Players.FirstOrDefault().playerId,
+                            teamId   = teamItem.TeamId,
+                            Player = teamItem.Players.FirstOrDefault()
+                        }
+                    }
                 };
                 _dbContext.Teams.Add(team);
                 _dbContext.SaveChanges();

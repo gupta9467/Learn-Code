@@ -27,8 +27,21 @@ namespace SportCarnival
             helper hp = new helper();
             switch (choice)
             {
-                case 1: hp.CreateTeam(game); break;
-                case 2: Console.WriteLine(JsonConvert.SerializeObject(hp.GetTeam((int)game.GameType, eventId))); ; break;
+                case 1:
+                    hp.CreateTeam(game);
+                    break;
+
+                case 2:
+                    List<Team> teams = hp.GetTeam((int)game.GameType, eventId);
+                    foreach (Team team in teams)
+                    {
+                        Console.WriteLine("TeamId :" + team.teamId + ", TeamName :" + team.name + ",GameId " + team.gameId);
+                        foreach (Team_Player team_Player in team.Team_Player)
+                        {
+                            Console.WriteLine("PlayerId : " + team_Player.playerId + ",TeamId :" + team_Player.teamId + "PlayerName :" + team_Player.Player.playerName);
+                        }
+                    }
+                    break;
             }
 
             Console.ReadLine();

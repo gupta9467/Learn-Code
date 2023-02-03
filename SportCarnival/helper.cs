@@ -33,13 +33,8 @@ namespace SportCarnival
                     case GameTypes.Cricket:
                         if (game.Players.Count % AppConstant.Constant.CricketPlayers == 0)
                         {
-                            List<Teams> teams = teamMethod.CreateTeam(game);
-                            foreach (Teams team in teams)
-                            {
-                                Console.WriteLine(JsonConvert.SerializeObject(team));
-                                total++;
-                            }
-                            Console.WriteLine(total);
+                            teamMethod.CreateTeam(game);
+                            Console.WriteLine("Team Created");
                         }
                         else
                         {
@@ -50,26 +45,25 @@ namespace SportCarnival
                     case GameTypes.Badminton:
                         if (game.Players.Count % AppConstant.Constant.BedMintonPlayers == 0)
                         {
-                            List<Teams> teams = teamMethod.CreateTeam(game);
-                            foreach (Teams team in teams)
-                            {
-                                Console.WriteLine(JsonConvert.SerializeObject(team));
-                                total++;
-                            }
-                            Console.WriteLine(total);
+                            teamMethod.CreateTeam(game);
+                            Console.WriteLine("Team Created");
                         }
+                        else
+                        {
+                            Console.WriteLine("Player is Less we can't create a Team");
+                        }
+
                         break;
 
                     case GameTypes.Chess:
                         if (game.Players.Count % AppConstant.Constant.ChessPlayer == 0)
                         {
-                            List<Teams> teams = teamMethod.CreateTeam(game);
-                            foreach (Teams team in teams)
-                            {
-                                Console.WriteLine(JsonConvert.SerializeObject(team));
-                                total++;
-                            }
-                            Console.WriteLine(total);
+                            teamMethod.CreateTeam(game);
+                            Console.WriteLine("Team Created");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Player is Less we can't create a Team");
                         }
                         break;
 
