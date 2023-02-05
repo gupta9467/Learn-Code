@@ -33,13 +33,10 @@ namespace SportCarnival
 
                 case 2:
                     List<Team> teams = hp.GetTeam((int)game.GameType, eventId);
+                    Console.WriteLine("total : " + teams.Count);
                     foreach (Team team in teams)
                     {
                         Console.WriteLine("TeamId :" + team.teamId + ", TeamName :" + team.name + ",GameId " + team.gameId);
-                        foreach (Team_Player team_Player in team.Team_Player)
-                        {
-                            Console.WriteLine("PlayerId : " + team_Player.playerId + ",TeamId :" + team_Player.teamId + "PlayerName :" + team_Player.Player.playerName);
-                        }
                     }
                     break;
             }
